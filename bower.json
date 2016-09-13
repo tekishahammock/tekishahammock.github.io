@@ -1,0 +1,20 @@
+{
+  "name": "tekishahammock.github.io",
+  "homepage": "https://github.com/tekishahammock/tekishahammock.github.io",
+  "authors": [
+    "Tekisha Hammock <tekisha.hammock@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
