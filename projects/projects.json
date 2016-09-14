@@ -1,0 +1,60 @@
+{
+  "projects": [
+    {
+      "image": "projects/img/css-animations.jpg",
+      "title": "Challenge: CSS Animations",
+      "description": "An early exercise in the Static Web Module at Nashville Software School. Meant to test our ability to work with CSS transitions and animations to emulate a gif supplied to us.",
+      "github": "https://github.com/tekishahammock/Challenge-7-CSS-Animations",
+      "deployed": "http://tekishahammock.com/Challenge-7-CSS-Animations/"
+    },
+    {
+      "image": "projects/img/dragon-eggs.jpg",
+      "title": "Group Project: Company Site",
+      "description": "First group project to test our ability to create a static website and use Git for version control with our peers. I most of the HTML for the page and assisted with some tricky CSS styling.",
+      "github": "https://github.com/tekishahammock/static-web-html-project-amazing-glasses",
+      "deployed": "http://tekishahammock.com/static-web-html-project-amazing-glasses/"
+    },
+    {
+      "image": "projects/img/wysiwyg.jpg",
+      "title": "Exercise: WYSIWYG",
+      "description": "Exercise from the Single Page Application Module at Nashville Software School, meant to test our ability to use IDs and eventhandlers to manipulate the DOM.",
+      "github": "https://github.com/tekishahammock/wysiwyg_exercise",
+      "deployed": "http://tekishahammock.com/wysiwyg_exercise/"
+    },
+    {
+      "image": "projects/img/chatty.jpg",
+      "title": "Group Project: Chatty",
+      "description": "Group project from the Single Page Application Module at Nashville Software School, solidifying our knowledge of how to write module code, create simple IDs, and work with JSON files.",
+      "github": "https://github.com/tekishahammock/spa-group-chatty-rtj",
+      "deployed": "http://tekishahammock.com/spa-group-chatty-rtj/"
+    },
+    {
+      "image": "projects/img/carlot.jpg",
+      "title": "Mastery Exercise: Car Lot",
+      "description": "Individual project given at the end of the Single Page Application Module to test our ability to use Bootstrap, write modular code, use JSON files, and create simple IDs for DOM manipulation.",
+      "github": "https://github.com/tekishahammock/spa-milestone-quiz-tekishahammock",
+      "deployed": "http://tekishahammock.com/spa-milestone-quiz-tekishahammock/"
+    },
+    {
+      "image": "projects/img/frontend-girls-coding.jpg",
+      "title": "Front-end Capstone: Girls Coding",
+      "description": "Large-scale project to demonstrate mastery of front-end curriculum at Nashville Software School. Girls Coding is an educational game made using Angular, Sass, and Firebase to store information.",
+      "github": "https://github.com/tekishahammock/Frontend-Capstone-Girls-Coding",
+      "deployed": "http://tekishahammock.com/Frontend-Capstone-Girls-Coding/#/"
+    },
+    {
+      "image": "projects/img/language-analyzer.png",
+      "title": "Group Project: Language Analyzer",
+      "description": "Our first back-end group project solidifying our ability to work on specific app features, write test-driven code and create a Python application.",
+      "github": "https://github.com/nss-day-cohort-13/language-analyzer-baby-got-back-end",
+      "deployed": false
+    },
+    {
+      "image": "projects/img/birdyboard4.png",
+      "title": "Mastery Exercise: Birdyboard",
+      "description": "Individual project given as a part of the back-end curriculum for Nashville Software School. Created a Twitter clone meant to test our initial understanding of relational data and serialization.",
+      "github": "https://github.com/nss-day-cohort-13/birdyboard-tekishahammock",
+      "deployed": false
+    }
+  ]
+}
