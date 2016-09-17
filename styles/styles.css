@@ -131,6 +131,12 @@ html {
   color: #fff;
 }
 
+/*-----------------------------------
+  MAIN VIEW STYLES
+------------------------------------*/
+.main-view {
+  min-height: calc(85vh - 70px);
+}
 
 /*------------------------------------
   FOOTER STYLES
@@ -140,6 +146,7 @@ html {
   color: #fff;
   background: linear-gradient(0deg, #D07B12, transparent 50%);
   border: none;
+  height: 50px;
 }
 
 .footer p {

@@ -1,19 +1,23 @@
+let project_list = [];
+
 $(".top-nav").hide();
 $(".projects-view").hide();
 $(".about-view").hide();
 $(".contact-view").hide();
 $(".footer").hide();
 
-$("#landing-projects-tab").click(function() {
-  show_main("projects");
+$(".landing-nav-button").click(function() {
+  show_main(event.currentTarget.id);
 });
 
-$("#landing-about-tab").click(function() {
-  show_main("about");
+$(".nav-button").click(function() {
+  show_page(event.currentTarget.id);
 });
 
-$("#landing-contact-tab").click(function() {
-  show_main("contact");
+$.getJSON("projects/projects.json", function(data) {
+  for (let i = 0; i < data.projects.length; i++) {
+    project_list.push(data.projects[i]);
+  }
 });
 
 function show_main(choice) {
@@ -29,16 +33,81 @@ function show_main(choice) {
   $(".footer").show("slide");
 
   switch (choice) {
-  case "projects":
-    console.log("going to projects page");
+  case "landing-projects-tab":
+    $(".projects-view").show("slide");
+    project_nav();
     break;
-  case "about":
-    console.log("going to about page");
+  case "landing-about-tab":
+    $(".about-view").show("slide");
     break;
-  case "contact":
-    console.log("going to the contact page");
+  case "landing-contact-tab":
+    $(".contact-view").show("slide");
+    break;
+  default:
+    console.log("what?");
+  }
+};
+
+function show_page(choice) {
+  event.preventDefault();
+
+  switch (choice) {
+  case "projects-tab":
+    $(".projects-view").show();
+    $(".about-view").hide();
+    $(".contact-view").hide();
+    project_nav();
+    break;
+  case "about-tab":
+    $(".projects-view").hide();
+    $(".about-view").show();
+    $(".contact-view").hide();
+    break;
+  case "contact-tab":
+    $(".projects-view").hide();
+    $(".about-view").hide();
+    $(".contact-view").show();
     break;
   default:
     console.log("what?");
   }
 }
+
+function project_nav() {
+  $.each(project_list, function(i, project) {
+    $("#project-navigation").append(
+      `<div>
+        <img id="project-${i}" src="${project.image}" alt="${project.title}">
+      </div>`
+    );
+  });
+  const default_project = project_list.length - 1;
+  current_project_display(default_project);
+}
+
+function current_project_display(project_id) {
+  let current_project = project_list[project_id];
+
+  let deployed_link;
+  if (current_project.deployed === false) {
+      deployed_link = "N/A";
+  } else {
+      deployed_link = current_project.deployed;
+  }
+
+  $("#current-project").append(
+    `<div>
+      <img id="current-project-image" src="${current_project.image}" alt="${current_project.title}">
+      <div>
+        <p><span class="caps">Title:</span> ${current_project.title}</p>
+        <p><span class="caps">Deployed Link:</span> ${deployed_link}</p>
+        <p><span class="caps">Github:</span> ${current_project.github}</p>
+        <p><span class="caps">Description:</span> ${current_project.description}</p>
+      </div>
+    </div>`
+  );
+}
+
+
+
+
