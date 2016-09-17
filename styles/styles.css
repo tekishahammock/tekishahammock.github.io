@@ -89,7 +89,7 @@ html {
 
 .top-nav {
   color: #fff;
-  background: linear-gradient(black, gray);
+  background: linear-gradient(#D07B12, #FFD420);
   border-radius: 0;
   border: none;
   font-family: 'Josefin Sans', sans-serif;
@@ -129,7 +129,7 @@ html {
 }
 
 .top-nav a:hover {
-  background: linear-gradient(#D07B12, #FFD420);
+  background: linear-gradient(#D65600, #D07B12);
 }
 
 .top-nav a:visited {
@@ -163,7 +163,18 @@ html {
   height: 400px;
   padding: 0;
   margin: 2rem 0;
+}
 
+#current-project p {
+  font-size: 2rem;
+}
+
+#current-project a {
+  color: #D07B12;
+}
+
+#current-project a:visited {
+  color: #D07B12;
 }
 
 #current-project img {
@@ -179,11 +190,6 @@ html {
 #current-text-container {
   padding-left: 2%;
   height: 400px;
-}
-
-.interior-text {
-  padding: 0;
-  margin: 0;
 }
 
 #project-navigation img {
@@ -219,7 +225,7 @@ html {
 }
 
 /*------------------------------------
-  ABOUT PAGE
+  ABOUT PAGE STYLES
 -------------------------------------*/
 .about-top {
   margin: 2rem 0;
@@ -227,6 +233,7 @@ html {
 
 .about-top p {
   min-height: 400px;
+  font-size: 2rem;
 }
 
 #prof-photo {
@@ -243,15 +250,44 @@ html {
 
 .about-bottom p {
   text-align: center;
+  font-size: 2rem;
   font-weight: 700;
+  width: 150px;
 }
+
+/*------------------------------------
+  CONTACT PAGE STYLES
+-------------------------------------*/
+.contact-link {
+  margin: 2rem;
+}
+
+.contact-view img {
+  width: 66px;
+}
+
+.contact-link a {
+  color: #D07B12;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 2px 0;
+}
+
+.contact-link a:hover {
+  color: #FFD420 !important;
+  text-decoration: none;
+}
+
+.contact-link a:visited {
+  color:#D07B12;
+}
+
 
 /*------------------------------------
   FOOTER STYLES
 -------------------------------------*/
 .footer {
-  color: #fff;
-  background: linear-gradient(0deg, #D07B12, transparent 50%);
+  background-color: transparent;
   border: none;
   height: 50px;
 }

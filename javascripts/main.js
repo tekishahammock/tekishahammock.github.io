@@ -24,24 +24,25 @@ $.getJSON("projects/projects.json", function(data) {
 function show_main(choice) {
   event.preventDefault();
 
-  $(".landing-div").animate({
-    "left":-$(".landing-div").outerWidth(true)
-  },{duration:250,queue:false,
-  specialEasing:{"left":"linear"}});
+  $(".landing-div").hide();
+  // $(".landing-div").animate({
+  //   "left":-$(".landing-div").outerWidth(true)
+  // },{duration:250,queue:false,
+  // specialEasing:{"left":"linear"}});
 
-  $(".top-nav").show("slide");
+  $(".top-nav").show();
 
-  $(".footer").show("slide");
+  $(".footer").show();
 
   switch (choice) {
   case "landing-projects-tab":
-    $(".projects-view").show("slide");
+    $(".projects-view").show();
     break;
   case "landing-about-tab":
-    $(".about-view").show("slide");
+    $(".about-view").show();
     break;
   case "landing-contact-tab":
-    $(".contact-view").show("slide");
+    $(".contact-view").show();
     break;
   default:
     console.log("what?");
