@@ -1,0 +1,299 @@
+html {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.caps {
+  font-weight: 700;
+}
+
+/*----------------------------------
+  LANDING DIV STYLES
+-----------------------------------*/
+.landing-div {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  background: linear-gradient(180deg, #FFD420, transparent 80%),
+              linear-gradient(0deg, #D07B12, transparent 80%),
+              url(img/kinkakuji-resized.jpg) no-repeat center;
+  background-size: cover;
+  height: 85%;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-text {
+  text-align: center;
+  height: 30%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-text h1 {
+  margin: 0 0 .5rem;
+  letter-spacing: .75rem;
+  font-size: 5rem;
+}
+
+.line {
+  height: 3px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.landing-text h3 {
+  margin: .5rem 0 0;
+  font-size: 3rem;
+  letter-spacing: .25rem;
+}
+
+.landing-text ul {
+  padding: 0;
+  margin: 2rem 0 0;
+  list-style-type: none;
+  font-size: 2.25rem;
+}
+
+.landing-text li {
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.landing-text li:nth-child(2) {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.landing-text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.landing-text a:hover {
+  text-decoration: underline;
+}
+
+.landing-text a:visited {
+  color: #fff;
+}
+
+/*------------------------------
+  NAVIGATION STYLES
+-------------------------------*/
+
+.top-nav {
+  color: #fff;
+  background: linear-gradient(#D07B12, #FFD420);
+  border-radius: 0;
+  border: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.top-nav h1 {
+  display: inline-block;
+  float: left;
+  margin: 2.7rem;
+  letter-spacing: .25rem;
+  font-size: 2.5rem;
+}
+
+.top-nav nav {
+  display: inline-block;
+  float: right;
+}
+
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.75rem;
+  letter-spacing: .25rem;
+}
+
+.top-nav li {
+  display: inline-block;
+  /*padding: 0 2rem;*/
+}
+
+.top-nav a {
+  display: inline-block;
+  padding: 2.8rem 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  background: linear-gradient(#D65600, #D07B12);
+}
+
+.top-nav a:visited {
+  color: #fff;
+}
+
+/*-----------------------------------
+  MAIN VIEW STYLES
+------------------------------------*/
+.main-view {
+  min-height: calc(85vh - 70px);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.page-header {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header h3 {
+  margin: 0;
+  padding: 0 0 1rem;
+  font-size: 4rem;
+}
+
+/*------------------------------------
+  PROJECT PAGE STYLES
+-------------------------------------*/
+#current-project {
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+#current-project p {
+  font-size: 2rem;
+}
+
+#current-project a {
+  color: #D07B12;
+}
+
+#current-project a:visited {
+  color: #D07B12;
+}
+
+#current-project img {
+  max-height: 400px;
+  max-width: 100%;
+}
+
+#current-image-container,
+#current-text-container {
+  padding: 0;
+}
+
+#current-text-container {
+  padding-left: 2%;
+  height: 400px;
+}
+
+#project-navigation img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.project-button {
+  position: relative;
+}
+
+.hover-overlay {
+  position: absolute;
+  background-color: rgba(255,212,32, 0.8);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hover-overlay p {
+  cursor: pointer;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem;
+  text-shadow: 0 0 10px #000;
+}
+
+.col-md-3 {
+  padding-top: 2rem;
+}
+
+/*------------------------------------
+  ABOUT PAGE STYLES
+-------------------------------------*/
+.about-top {
+  margin: 2rem 0;
+}
+
+.about-top p {
+  min-height: 400px;
+  font-size: 2rem;
+}
+
+#prof-photo {
+  display: inline;
+  float: left;
+  padding-right: 2rem;
+}
+
+#silly-photo {
+  display: inline;
+  float: right;
+  padding-left: 2rem;
+}
+
+.about-bottom p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 150px;
+}
+
+/*------------------------------------
+  CONTACT PAGE STYLES
+-------------------------------------*/
+.contact-link {
+  margin: 2rem;
+}
+
+.contact-view img {
+  width: 66px;
+}
+
+.contact-link a {
+  color: #D07B12;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 2px 0;
+}
+
+.contact-link a:hover {
+  color: #FFD420 !important;
+  text-decoration: none;
+}
+
+.contact-link a:visited {
+  color:#D07B12;
+}
+
+
+/*------------------------------------
+  FOOTER STYLES
+-------------------------------------*/
+.footer {
+  background-color: transparent;
+  border: none;
+  height: 50px;
+}
+
+.footer p {
+  display: inline-block;
+  padding-top: 3rem;
+  margin: 0;
+}
