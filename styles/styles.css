@@ -1,14 +1,18 @@
 html {
   font-family: 'Josefin Sans', sans-serif;
-  color: #fff;
 }
 
+/*----------------------------------
+  LANDING DIV STYLES
+-----------------------------------*/
 .landing-div {
-  background: linear-gradient(180deg, #FFD420, transparent 90%),
-              linear-gradient(0deg, #513909, transparent 90%),
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  background: linear-gradient(180deg, #FFD420, transparent 80%),
+              linear-gradient(0deg, #D07B12, transparent 80%),
               url(img/kinkakuji-resized.jpg) no-repeat center;
   background-size: cover;
-  height: 500px;
+  height: 85%;
   width: 90%;
   position: absolute;
   top: 50%;
@@ -29,7 +33,7 @@ html {
 .landing-text h1 {
   margin: 0 0 .5rem;
   letter-spacing: .75rem;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .line {
@@ -41,11 +45,105 @@ html {
 
 .landing-text h3 {
   margin: .5rem 0 0;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: .25rem;
 }
 
-.landing-text p {
-  font-size: 1.25rem;
+.landing-text ul {
+  padding: 0;
+  margin: 2rem 0 0;
+  list-style-type: none;
+  font-size: 2.25rem;
 }
 
+.landing-text li {
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.landing-text li:nth-child(2) {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.landing-text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.landing-text a:hover {
+  text-decoration: underline;
+}
+
+.landing-text a:visited {
+  color: #fff;
+}
+
+/*------------------------------
+  NAVIGATION STYLES
+-------------------------------*/
+
+.top-nav {
+  color: #fff;
+  background: linear-gradient(black, gray);
+  border-radius: 0;
+  border: none;
+}
+
+.top-nav h1 {
+  display: inline-block;
+  float: left;
+  margin: 2.7rem;
+  letter-spacing: .25rem;
+  font-size: 2.5rem;
+}
+
+.top-nav nav {
+  display: inline-block;
+  float: right;
+}
+
+.top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.75rem;
+  letter-spacing: .25rem;
+}
+
+.top-nav li {
+  display: inline-block;
+  /*padding: 0 2rem;*/
+}
+
+.top-nav a {
+  display: inline-block;
+  padding: 2.8rem 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  background: linear-gradient(#D07B12, #FFD420);
+}
+
+.top-nav a:visited {
+  color: #fff;
+}
+
+
+/*------------------------------------
+  FOOTER STYLES
+-------------------------------------*/
+
+.footer {
+  color: #fff;
+  background: linear-gradient(0deg, #D07B12, transparent 50%);
+  border: none;
+}
+
+.footer p {
+  display: inline-block;
+  padding-top: 3rem;
+  margin: 0;
+}
