@@ -18,6 +18,7 @@ $.getJSON("projects/projects.json", function(data) {
   for (let i = 0; i < data.projects.length; i++) {
     project_list.push(data.projects[i]);
   }
+  project_nav();
 });
 
 function show_main(choice) {
@@ -35,7 +36,6 @@ function show_main(choice) {
   switch (choice) {
   case "landing-projects-tab":
     $(".projects-view").show("slide");
-    project_nav();
     break;
   case "landing-about-tab":
     $(".about-view").show("slide");
@@ -56,7 +56,6 @@ function show_page(choice) {
     $(".projects-view").show();
     $(".about-view").hide();
     $(".contact-view").hide();
-    project_nav();
     break;
   case "about-tab":
     $(".projects-view").hide();
@@ -76,10 +75,10 @@ function show_page(choice) {
 function project_nav() {
   $.each(project_list, function(i, project) {
     $("#project-navigation").append(
-      `<div class="project-grid">
+      `<div class="col-md-3 col-sm-4 col-xs-6">
         <div id="project-${i}" class="project-button">
           <img src="${project.image}" alt="${project.title}">
-          <div id="button-hover-${i}"><p>${project.title}</p></div>
+          <div id="button-hover-${i}" class="hover-overlay"><p>${project.title}</p></div>
         </div>
       </div>`
     );
@@ -91,6 +90,7 @@ function project_nav() {
 
   $(".project-button").click(function() {
     current_project_display(event.currentTarget.id.replace("project-", ""));
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
   $(".project-button").mouseenter(function() {
@@ -113,9 +113,11 @@ function current_project_display(project_id) {
   }
 
   $("#current-project").html(
-    `<div>
+    `<div id="current-image-container" class="col-md-8">
       <img id="current-project-image" src="${current_project.image}" alt="${current_project.title}">
-      <div>
+    </div>
+    <div id="current-text-container" class="col-md-4">
+      <div class="interior-text">
         <p><span class="caps">Title:</span> ${current_project.title}</p>
         <p><span class="caps">Deployed Link:</span> ${deployed_link}</p>
         <p><span class="caps">Github:</span> <a href="${current_project.github}">Github</a></p>
