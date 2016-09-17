@@ -219,9 +219,36 @@ html {
 }
 
 /*------------------------------------
+  ABOUT PAGE
+-------------------------------------*/
+.about-top {
+  margin: 2rem 0;
+}
+
+.about-top p {
+  min-height: 400px;
+}
+
+#prof-photo {
+  display: inline;
+  float: left;
+  padding-right: 2rem;
+}
+
+#silly-photo {
+  display: inline;
+  float: right;
+  padding-left: 2rem;
+}
+
+.about-bottom p {
+  text-align: center;
+  font-weight: 700;
+}
+
+/*------------------------------------
   FOOTER STYLES
 -------------------------------------*/
-
 .footer {
   color: #fff;
   background: linear-gradient(0deg, #D07B12, transparent 50%);
