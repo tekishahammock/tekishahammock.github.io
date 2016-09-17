@@ -76,13 +76,30 @@ function show_page(choice) {
 function project_nav() {
   $.each(project_list, function(i, project) {
     $("#project-navigation").append(
-      `<div>
-        <img id="project-${i}" src="${project.image}" alt="${project.title}">
+      `<div class="project-grid">
+        <div id="project-${i}" class="project-button">
+          <img src="${project.image}" alt="${project.title}">
+          <div id="button-hover-${i}"><p>${project.title}</p></div>
+        </div>
       </div>`
     );
+    let hide_hover = `#button-hover-${i}`;
+    $(hide_hover).hide();
   });
   const default_project = project_list.length - 1;
   current_project_display(default_project);
+
+  $(".project-button").click(function() {
+    current_project_display(event.currentTarget.id.replace("project-", ""));
+  });
+
+  $(".project-button").mouseenter(function() {
+    project_button_hover(event.currentTarget);
+  });
+
+  $(".project-button").mouseleave(function() {
+    project_button_leave(event.currentTarget);
+  });
 }
 
 function current_project_display(project_id) {
@@ -92,20 +109,30 @@ function current_project_display(project_id) {
   if (current_project.deployed === false) {
       deployed_link = "N/A";
   } else {
-      deployed_link = current_project.deployed;
+      deployed_link = `<a href="${current_project.deployed}">Project Site</a>`;
   }
 
-  $("#current-project").append(
+  $("#current-project").html(
     `<div>
       <img id="current-project-image" src="${current_project.image}" alt="${current_project.title}">
       <div>
         <p><span class="caps">Title:</span> ${current_project.title}</p>
         <p><span class="caps">Deployed Link:</span> ${deployed_link}</p>
-        <p><span class="caps">Github:</span> ${current_project.github}</p>
+        <p><span class="caps">Github:</span> <a href="${current_project.github}">Github</a></p>
         <p><span class="caps">Description:</span> ${current_project.description}</p>
       </div>
     </div>`
   );
+}
+
+function project_button_hover(mouseenter) {
+  let this_project = mouseenter.id.replace("project-", "#button-hover-");
+  $(this_project).show();
+}
+
+function project_button_leave(mouseleave) {
+  let this_project = mouseleave.id.replace("project-", "#button-hover-");
+  $(this_project).hide();
 }
 
 
