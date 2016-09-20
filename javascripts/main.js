@@ -1,3 +1,5 @@
+"use strict";
+
 let project_list = [];
 
 $(".top-nav").hide();
