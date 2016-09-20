@@ -1,6 +1,6 @@
 "use strict";
 
-let project_list = [];
+var project_list = [];
 
 $(".top-nav").hide();
 $(".projects-view").hide();
@@ -17,7 +17,7 @@ $(".nav-button").click(function() {
 });
 
 $.getJSON("projects/projects.json", function(data) {
-  for (let i = 0; i < data.projects.length; i++) {
+  for (var i = 0; i < data.projects.length; i++) {
     project_list.push(data.projects[i]);
   }
   project_nav();
@@ -85,10 +85,10 @@ function project_nav() {
         </div>
       </div>`
     );
-    let hide_hover = `#button-hover-${i}`;
+    var hide_hover = `#button-hover-${i}`;
     $(hide_hover).hide();
   });
-  const default_project = project_list.length - 1;
+  var default_project = project_list.length - 1;
   current_project_display(default_project);
 
   $(".project-button").click(function() {
@@ -106,9 +106,9 @@ function project_nav() {
 }
 
 function current_project_display(project_id) {
-  let current_project = project_list[project_id];
+  var current_project = project_list[project_id];
 
-  let deployed_link;
+  var deployed_link;
   if (current_project.deployed === false) {
       deployed_link = "N/A";
   } else {
@@ -131,12 +131,12 @@ function current_project_display(project_id) {
 }
 
 function project_button_hover(mouseenter) {
-  let this_project = mouseenter.id.replace("project-", "#button-hover-");
+  var this_project = mouseenter.id.replace("project-", "#button-hover-");
   $(this_project).show();
 }
 
 function project_button_leave(mouseleave) {
-  let this_project = mouseleave.id.replace("project-", "#button-hover-");
+  var this_project = mouseleave.id.replace("project-", "#button-hover-");
   $(this_project).hide();
 }
 
